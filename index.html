@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Managment</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>CRUDS</h1>
+        <p>PRODUCT Managment SYSTEM</p>
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="title" id="title" />
+        <div class="prices">
+          <input
+            onkeyup="total()"
+            type="number"
+            placeholder="price"
+            id="price"
+          />
+          <input
+            onkeyup="total()"
+            type="number"
+            placeholder="taxes"
+            id="taxes"
+          />
+          <input onkeyup="total()" type="number" placeholder="ads" id="ads" />
+          <input
+            onkeyup="total()"
+            type="number"
+            placeholder="discount"
+            id="discount"
+          />
+          <small class="total"> </small>
+        </div>
+        <input onkeyup="total()" type="number" placeholder="count" id="count" />
+        <input
+          onkeyup="total()"
+          type="text"
+          placeholder="category"
+          id="category"
+        />
+        <button id="create">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="search">
+          <input
+            onkeyup="search(this.value)"
+            type="text"
+            placeholder="search"
+            id="search"
+          />
+          <div class="btn">
+            <button onclick="searchMood(this.id)" id="searchtitle">
+              Search By Title
+            </button>
+            <button onclick="searchMood(this.id)" id="searchcat">
+              Search By category
+            </button>
+          </div>
+        </div>
+        <div id="deleteAll"></div>
+        <table>
+          <th>ID</th>
+          <th>TITLE</th>
+          <th>PRICE</th>
+          <th>TAXES</th>
+          <th>ADS</th>
+          <th>DISCOUNT</th>
+          <th>TOTAL</th>
+          <th>CATEGORY</th>
+          <th>UPDATE</th>
+          <th>DELETE</th>
+
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.js"
+      integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
